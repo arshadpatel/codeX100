@@ -12,13 +12,14 @@ body {
 }
 
 /* Navigation Bar */
-.navbar {
+
+/* .Navbar {
     background-color: #333;
     color: white;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 
 .navbar .logo h1 {
@@ -39,23 +40,27 @@ body {
     text-decoration: none;
     font-size: 1rem;
 }
+.navbar .nav-links a:hover{
+    opacity: 0.8;
+    box-shadow:0 0 8px rgba(255, 255, 255, 0.5);
+}
 
 .navbar .btn {
     padding: 0.5rem 1rem;
-    background-color: #007bff;
+    background-color: #7393B3;
     color: white;
     border-radius: 5px;
 }
 
 .navbar .btn:hover {
-    background-color: #0056b3;
-}
+    background-color:#6082B6;
+} */
 
 /* Hero Section */
 .hero-section {
     text-align: center;
     padding: 50px 0;
-    background-color: #007bff;
+    background-color:#7393B3;
     color: white;
 }
 
@@ -110,3 +115,5 @@ body {
 .btn-secondary:hover {
     background-color: #555;
 }
+
+/* <i class="fa-solid fa-bars"></i> */
