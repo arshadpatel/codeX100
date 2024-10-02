@@ -1,0 +1,112 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo h1 {
+    font-size: 1.8rem;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar .btn {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #007bff;
+    color: white;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19;
+}
+
+/* Course Recommendations Section */
+.course-recommendations {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.course-list, .recommended-courses {
+    margin-top: 20px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 200px;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+}
