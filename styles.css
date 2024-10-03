@@ -1,216 +1,349 @@
 /* Basic resets */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .navbar .logo h1 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .navbar .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .navbar .nav-links li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .navbar .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .navbar .btn {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
 }
 
 .navbar .btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Hero Section */
 .hero-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #007bff;
-    color: white;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #007bff;
+  color: white;
 }
 
 .hero-section h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .hero-section p {
-    margin: 20px 0;
-    font-size: 1.2rem;
+  margin: 20px 0;
+  font-size: 1.2rem;
 }
 
 .btn-primary {
-    padding: 1rem 2rem;
-    background-color: #ff5722;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #ff5722;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
-    background-color: #e64a19;
+  background-color: #e64a19;
 }
 
 /* Course Recommendations Section */
 .course-recommendations {
-    padding: 50px 20px;
-    text-align: center;
+  padding: 50px 20px;
+  text-align: center;
 }
 
 .course-list,
 .recommended-courses {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .course-card {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 200px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 200px;
 }
 
 .btn-secondary {
-    background-color: #333;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .btn-secondary:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 /* Footer  */
 
 .site-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-    font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 1rem;
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 1rem;
 }
 
 .footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .footer-section ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section a {
-    color: #ddd;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .social-icons {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #555;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #555;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: #777;
+  background-color: #777;
 }
 
 .social-icon i {
-    color: #fff;
-    font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 /* Specific colors for each social media platform */
 .social-icon.linkedin:hover {
-    background-color: #0077b5;
+  background-color: #0077b5;
 }
 
 .social-icon.instagram:hover {
-    background-color: #e4405f;
+  background-color: #e4405f;
 }
 
 .social-icon.youtube:hover {
-    background-color: #ff0000;
+  background-color: #ff0000;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #555;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #555;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-links {
+  transition: max-height 0.3s ease-out;
+}
+
+/* Responsive Styles */
+
+/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  .nav-links.active {
+    max-height: 500px; /* Allows menu expansion */
+
+  }
+  .nav-links li {
+    margin-left: 0;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    -links a {
+        max-height: 0;
+      display: block;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
     }
 
-    .footer-section {
-        margin-bottom: 2rem;
+    
+    
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
     }
+    .hero-section h2 {
+      font-size: 2rem;
+    }
+
+    .hero-section p {
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      padding: 0.8rem 1.5rem;
+    }
+    .recommended-courses {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .recommended-courses > div {
+      width: 100%;
+    }
+
+    .course-card {
+      width: 100%;
+      margin: 10px auto;
+      padding: 20px;
+      text-align: center; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-card h4 {
+      font-size: 1rem;
+    }
+
+    .course-card p {
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+
+    .btn-secondary {
+      padding: 0.8rem 1.5rem;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+
+  /* Tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .navbar .nav-links li {
+      margin-left: 15px;
+    }
+
+    .hero-section h2 {
+      font-size: 2.2rem;
+    }
+
+    .hero-section p {
+      font-size: 1.1rem;
+    }
+    .recommended-courses {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .recommended-courses > div {
+      width: 100%;
+    }
+  }
 }
