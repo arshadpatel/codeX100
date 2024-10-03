@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import connectDB from './config/db.js';
 import courseRoutes from './routes/courseRoutes.js';
+import morgan from 'morgan';
 dotenv.config();
 const app = express();
 
