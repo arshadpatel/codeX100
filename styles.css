@@ -47,20 +47,18 @@ body {
     opacity: 0.7;
 }
 
-
-  .hide {
+  .hide,.cross {
     display: none;
   }
   
-  .hide1 {
-    display: block;
-  }
+ 
   
   @media (max-width: 1000px) {
-    .navbar .nav-links {
-      display: none;
-    }
-    .hide {
+
+    .hide1 a{
+        display:none;
+      }
+    .hide{
         display: block;
         list-style: none;
         color: white;
@@ -69,14 +67,11 @@ body {
         margin-left: 20px;
         margin-right: 10px;
       }
-      .hide:hover{
-          opacity: 0.7;
-      }
-    .hide1 {
-      display: none;
-    }
+      .hide{
+        opacity: 0.7;
+        }
   }
-  
+
   .show-nav-links {
     display: block;
     position: absolute;
@@ -84,14 +79,17 @@ body {
     left: 0;
     background-color: #333;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0.9;
   }
   
   .show-nav-links li {
     margin-bottom: 20px;
+ 
   }
   
   .show-nav-links a {
