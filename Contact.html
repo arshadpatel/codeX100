@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feedback, or concerns, we’d love to hear from you! Please fill out the form below, and we’ll get back to you as soon as possible.</p>
+        <p>Feel free to reach out about:</p>
+        <ul>
+            <li>Product inquiries</li>
+            <li>Technical support</li>
+            <li>Feedback on our services</li>
+            <li>Suggestions for improvement</li>
+            <li>General questions</li>
+        </ul>
+        
+        <form id="contact-form">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@domain.com" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter your message" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
