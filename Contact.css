@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+
+   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    background: linear-gradient(120deg, #1e1e2f, #2a2a38);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(30, 30, 47, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+ul {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 15px;
+    background: #ff4757;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff6b81;
+}
