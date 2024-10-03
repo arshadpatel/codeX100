@@ -12,14 +12,13 @@ body {
 }
 
 /* Navigation Bar */
-
-/* .Navbar {
+.navbar {
     background-color: #333;
     color: white;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 }
 
 .navbar .logo h1 {
@@ -29,10 +28,14 @@ body {
 .navbar .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .navbar .nav-links li {
     margin-left: 20px;
+   
 }
 
 .navbar .nav-links a {
@@ -41,26 +44,80 @@ body {
     font-size: 1rem;
 }
 .navbar .nav-links a:hover{
-    opacity: 0.8;
-    box-shadow:0 0 8px rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
 }
 
+
+  .hide {
+    display: none;
+  }
+  
+  .hide1 {
+    display: block;
+  }
+  
+  @media (max-width: 1000px) {
+    .navbar .nav-links {
+      display: none;
+    }
+    .hide {
+        display: block;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 20px;
+        margin-right: 10px;
+      }
+      .hide:hover{
+          opacity: 0.7;
+      }
+    .hide1 {
+      display: none;
+    }
+  }
+  
+  .show-nav-links {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .show-nav-links li {
+    margin-bottom: 20px;
+  }
+  
+  .show-nav-links a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  
 .navbar .btn {
     padding: 0.5rem 1rem;
-    background-color: #7393B3;
+    background-color: #007bff;
     color: white;
     border-radius: 5px;
 }
 
 .navbar .btn:hover {
-    background-color:#6082B6;
-} */
+    background-color: #0056b3;
+}
+
 
 /* Hero Section */
 .hero-section {
     text-align: center;
     padding: 50px 0;
-    background-color:#7393B3;
+    background-color: #007bff;
     color: white;
 }
 
@@ -74,10 +131,11 @@ body {
 }
 
 .btn-primary {
-    padding: 1rem 2rem;
+
+    padding: 0.7rem 2rem;
     background-color: #ff5722;
     color: white;
-    border-radius: 5px;
+    border-radius: 7px;
     text-decoration: none;
 }
 
@@ -91,7 +149,8 @@ body {
     text-align: center;
 }
 
-.course-list, .recommended-courses {
+.course-list,
+.recommended-courses {
     margin-top: 20px;
 }
 
@@ -116,4 +175,105 @@ body {
     background-color: #555;
 }
 
-/* <i class="fa-solid fa-bars"></i> */
+/* Footer  */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #777;
+}
+
+.social-icon i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Specific colors for each social media platform */
+.social-icon.linkedin:hover {
+    background-color: #0077b5;
+}
+
+.social-icon.instagram:hover {
+    background-color: #e4405f;
+}
+
+.social-icon.youtube:hover {
+    background-color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+}
