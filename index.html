@@ -30,12 +30,10 @@
           <li ><a href="#">IDE</a></li>
           <li ><a href="#">Contact Us</a></li>
           <li ><a href="#" class="btn" >Sign Up</a></li>
-          <li ><a href="#" class="btn ">Login</a></li>
+          <li ><a href="#" class="btn " onclick="openForm()">Login</a></li>
         </ul>
       </div>
       <a href="#" class="hide"><i class="fa-solid fa-bars"></i></a>
-  
-
     </nav>
 
     <!-- Main Section -->
@@ -67,7 +65,31 @@
           <button class="btn-secondary">View Course</button>
         </div>
       </div>
+
+      <!-- Backdrop and login form -->
+  <div id="backdrop" class="backdrop">
+    <div class="login-form">
+      <span class="close-btn" onclick="closeForm()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm" onsubmit="return validateForm()">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <small id="emailError" class="error"></small>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <small id="passwordError" class="error"></small>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+
     </section>
+
+
+
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-section">
