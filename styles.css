@@ -28,10 +28,14 @@ body {
 .navbar .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .navbar .nav-links li {
     margin-left: 20px;
+   
 }
 
 .navbar .nav-links a {
@@ -39,7 +43,62 @@ body {
     text-decoration: none;
     font-size: 1rem;
 }
+.navbar .nav-links a:hover{
+    opacity: 0.7;
+}
 
+  .hide,.cross {
+    display: none;
+  }
+  
+ 
+  
+  @media (max-width: 1000px) {
+
+    .hide1 a{
+        display:none;
+      }
+    .hide{
+        display: block;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 20px;
+        margin-right: 10px;
+      }
+      .hide{
+        opacity: 0.7;
+        }
+  }
+
+  .show-nav-links {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.9;
+  }
+  
+  .show-nav-links li {
+    margin-bottom: 20px;
+ 
+  }
+  
+  .show-nav-links a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  
 .navbar .btn {
     padding: 0.5rem 1rem;
     background-color: #007bff;
@@ -50,6 +109,7 @@ body {
 .navbar .btn:hover {
     background-color: #0056b3;
 }
+
 
 /* Hero Section */
 .hero-section {
@@ -69,10 +129,11 @@ body {
 }
 
 .btn-primary {
-    padding: 1rem 2rem;
+
+    padding: 0.7rem 2rem;
     background-color: #ff5722;
     color: white;
-    border-radius: 5px;
+    border-radius: 7px;
     text-decoration: none;
 }
 
