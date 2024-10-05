@@ -142,34 +142,137 @@ body {
 
 /* Course Recommendations Section */
 .course-recommendations {
-    padding: 50px 20px;
-    text-align: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.course-list,
+/* Heading styles */
+.course-recommendations h2,
+.course-recommendations h3 {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 15px;
+}
+
+.course-recommendations h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.course-recommendations h3 {
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+
+
+.course-list {
+  margin-bottom: 30px;
+}
+
+.course-list p {
+  font-size: 16px;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+
 .recommended-courses {
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 20px 30px;
 }
 
+/* Course card styling */
 .course-card {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 200px;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  overflow: hidden;
 }
 
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Course thumbnail */
+.course-thumbnail {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+/* Course info */
+.course-info {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Course title and description */
+.course-card h4 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Button styling */
 .btn-secondary {
-    background-color: #333;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .btn-secondary:hover {
-    background-color: #555;
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .course-recommendations {
+    padding: 25px;  
+  }
+  .course-recommendations h3{
+    text-align: center; 
+  }
+  .recommended-courses {
+    flex-direction: column;     
+      gap: 20px;
+      margin: 10px 5px; 
+  }
+  .course-card {
+    flex: 1 1 100%;
+  }
 }
 
 /* Footer  */
