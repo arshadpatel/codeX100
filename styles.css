@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .navbar .logo h1 {
@@ -50,9 +51,7 @@ body {
   .hide,.cross {
     display: none;
   }
-  
- 
-  
+   
   @media (max-width: 1000px) {
 
     .hide1 a{
@@ -266,12 +265,135 @@ body {
     border-top: 1px solid #555;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
+.hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger i {
+    font-size: 1.5rem;
+    color: white;
+  } 
 
-    .footer-section {
-        margin-bottom: 2rem;
+@media (max-width: 768px) {
+    .hamburger {
+      display: block;
     }
-}
+  
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease-out;
+    }
+    .nav-links.active {
+      max-height: 500px; /* Allows menu expansion */
+      background-color: rgb(51, 51, 51,0.9);
+  
+    }
+    .nav-links li {
+      margin-left: 0;
+      margin-bottom: 20px;
+      width: 70%;
+      text-align: center;
+    }
+  
+    .nav-links a {
+      -links a {
+        max-height: 0;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+      }
+  
+      .btn {
+        background-color: #007bff;
+        color: white;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+      }
+      .hero-section h2 {
+        font-size: 2rem;
+      }
+  
+      .hero-section p {
+        font-size: 1rem;
+      }
+  
+      .btn-primary {
+        padding: 0.8rem 1.5rem;
+      }
+      .recommended-courses {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .recommended-courses > div {
+        width: 100%;
+      }
+  
+      .course-card {
+        width: 100%;
+        margin: 10px auto;
+        padding: 20px;
+        text-align: center; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      .course-card h4 {
+        font-size: 1rem;
+      }
+  
+      .course-card p {
+        font-size: 0.9rem;
+        margin: 10px 0;
+      }
+  
+      .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        display: inline-block;
+        margin-top: 10px;
+      }
+  
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  
+    /* Tablets (max-width: 1024px) */
+    @media (max-width: 1024px) {
+      .navbar .nav-links li {
+        margin-left: 15px;
+      }
+  
+      .hero-section h2 {
+        font-size: 2.2rem;
+      }
+  
+      .hero-section p {
+        font-size: 1.1rem;
+      }
+      .recommended-courses {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .recommended-courses > div {
+        width: 100%;
+      }
+    }
+  }
