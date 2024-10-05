@@ -1,1 +1,48 @@
-/node_modules
+# Backend (Express.js)
+backend/node_modules/
+backend/npm-debug.log
+backend/yarn-error.log
+backend/.env
+backend/logs/
+backend/*.log
+backend/pids/
+backend/*.pid
+backend/*.pid.lock
+
+# Frontend (HTML, CSS, JS)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/*.cache
+frontend/*.bak
+
+# Common dependency directories
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+.ntvs
+*.njsproj
+*.sln
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+
+# Coverage directory
+backend/coverage/
+frontend/coverage/
+
+# Log and error files
+*.log
+*.error.log
+
+# Build and dist files for both backend and frontend
+backend/build/
+frontend/build/
