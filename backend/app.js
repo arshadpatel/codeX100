@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
-import express from 'express';
-import connectDB from './config/db.js';
-import courseRoutes from './routes/courseRoutes.js';
-import morgan from 'morgan';
+import dotenv from "dotenv";
+import express from "express";
+import connectDB from "./config/db.js";
+import courseRoutes from "./routes/courseRoutes.js";
+import morgan from "morgan";
 dotenv.config();
 const app = express();
 
@@ -15,16 +15,20 @@ connectDB();
 
 // Middleware
 app.use(express.json()); // For parsing application/json
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
 // API Routes
-app.use('/api', courseRoutes);
+app.use("/api", courseRoutes);
 
-// Handle 404
-app.use((req, res) => {
-  res.status(404).json({ success: false, message: 'Route not found' });
+// Healthcheck route for development
+app.get("/healtcheck", (_, res) => {
+  res.send("Everything is fine & server is listening on port " + PORT);
 });
 
+// Handle 404
+app.use("*", (req, res) => {
+  res.status(404).json({ success: false, message: "Route not found" });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
