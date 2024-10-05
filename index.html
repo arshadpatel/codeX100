@@ -32,7 +32,7 @@
         <li><a href="#">IDE</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#" class="btn">Sign Up</a></li>
-        <li><a href="#" class="btn">Login</a></li>
+        <li><a onclick="openForm()" class="btn">Login</a></li>
       </ul>
     </nav>
 
@@ -63,6 +63,27 @@
           <h4>Data Structures in Java</h4>
           <p>Master DSA with Java from basics to advanced.</p>
           <button class="btn-secondary">View Course</button>
+        </div>
+      </div>
+
+      <div id="backdrop" class="backdrop">
+        <div class="login-form">
+          <span class="close-btn" onclick="closeForm()">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm" onsubmit="return validateForm()">
+            <input type="email" id="email" name="email" placeholder="Email">
+            
+            <small id="emailError" class="error"></small>
+    
+           
+            <input type="password" id="password" name="password" placeholder="Password">
+            <small id="passwordError" class="error"></small>
+    
+            <button class="submit" type="submit">Login</button>
+            <button class="google" type="submit">Sign In with Google&nbsp;<img src="./google.png" height="25" width="25"/></button>
+            <button class="github" type="submit">Sign In with Github <i class="fa-brands fa-github"></i></button>
+            <p>don't have an account yet? <span>Sign Up</span></p>
+          </form>
         </div>
       </div>
     </section>

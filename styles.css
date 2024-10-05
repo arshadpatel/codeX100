@@ -172,6 +172,139 @@ body {
     background-color: #555;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.login-form form #email,#password{
+  height: 3rem;
+}
+
+
+.login-form form #email,#password::placeholder{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #777777a4;
+  font-size: medium;
+}
+
+.login-form form .submit{
+  width: 100%;
+  height: 3rem;
+  background-color: #007bff;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  font-weight: 700;
+}
+.login-form form .google{
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem; background-color: white;
+  border:1px solid rgba(181, 176, 176, 0.763);
+  color: #333;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  font-weight: 700;
+}
+
+.login-form form .google img{
+  position: absolute;
+  top:12px;
+}
+
+.login-form form .github{
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+  background-color: white;
+  border:1px solid rgba(181, 176, 176, 0.763);
+  color: #333;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  font-weight: 700;
+}
+
+
+.login-form form .github i{
+  font-size: 25px;
+}
+.login-form h2 {
+  margin-bottom: 20px;
+}
+.login-form form p{
+  margin-top:1rem;
+  color: rgba(125, 121, 121, 0.763) ;
+}
+
+.login-form form p span{
+  color: #0056b3;
+}
+.login-form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .login-form {
+    width: 90%;
+  }
+}
+
+
 /* Footer  */
 
 .site-footer {
