@@ -7,11 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,10 +20,10 @@
       <div class="hamburger" id="hamburger">
         <i class="fas fa-bars"></i>
       </div>
-      <ul class="nav-links">  
+      <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#">Courses</a></li>
-        <li><a href="#">Notes</a></li>
+        <li><a href="#notes-section">Notes</a></li>
         <li><a href="#">IDE</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#" class="btn">Sign Up</a></li>
@@ -64,6 +61,40 @@
         </div>
       </div>
     </section>
+
+    <!--Notes section-->
+    <section id="notes-section" class="notes-section">
+      <h2>Notes</h2>
+      <div class="card-container">
+          <div class="card">
+              <h3>JavaScript Basics</h3>
+              <p>An introduction to JavaScript, covering variables, functions, and loops.</p>
+              <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="card">
+              <h3>CSS Flexbox</h3>
+              <p>Learn how to align and distribute items with Flexbox layout in CSS.</p>
+              <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="card">
+              <h3>Responsive Design</h3>
+              <p>Understand the principles of responsive web design and media queries.</p>
+              <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="card">
+              <h3>HTML Semantics</h3>
+              <p>Explore the importance of semantic HTML and its impact on accessibility.</p>
+              <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="card"> 
+            <h3>Advanced CSS Techniques</h3>
+            <p>Discover CSS Grid and animations to create advanced layouts and effects.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+  </section>
+
+
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-section">
@@ -77,28 +108,13 @@
         <div class="footer-section">
           <h3>Connect With Us</h3>
           <div class="social-icons">
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon linkedin"
-            >
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon instagram"
-            >
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a
-              href="https://youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon youtube"
-            >
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -110,7 +126,5 @@
     </footer>
 
     <script src="script.js"></script>
-  </body> 
-
+  </body>
 </html>
-
