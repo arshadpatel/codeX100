@@ -22,10 +22,10 @@ body {
     position: relative;
 }
 
-.navbar .logo h1 {
-    font-size: 1.8rem;
+.logo > a > img{
+  width: 200px;
+  height: auto;
 }
-
 .navbar .nav-links {
     list-style: none;
     display: flex;
