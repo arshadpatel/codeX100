@@ -12,17 +12,18 @@ function signup() {
 
 // add functionality to  hamburger 
 // Select the hamburger icon and navigation links
-const hamburger = document.querySelector('.hide');
-const navLinks = document.querySelector('.nav-links');
+document.getElementById('hamburger').addEventListener('click', function() {
+  const navLinks = document.querySelector('.nav-links');
+  const icon = this.querySelector('i');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show-nav-links');
-  if (navLinks.classList.contains('show-nav-links')) {
-    navLinks.classList.remove('hide1');
-    hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  navLinks.classList.toggle('active');
+  
+  if (navLinks.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times'); // Change to cross icon
   } else {
-    navLinks.classList.add('hide1');
-    hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars'); // Revert to hamburger icon
   }
 });
 
