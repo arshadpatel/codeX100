@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/arshadpatel/codeX100#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0",
     "morgan": "^1.10.0",
     "zod": "^3.23.8"
