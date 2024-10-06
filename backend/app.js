@@ -1,8 +1,9 @@
-import dotenv from "dotenv";
-import express from "express";
-import connectDB from "./config/db.js";
-import courseRoutes from "./routes/courseRoutes.js";
-import morgan from "morgan";
+import dotenv from 'dotenv';
+import express from 'express';
+import connectDB from './config/db.js';
+import courseRoutes from './routes/courseRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import morgan from 'morgan';
 dotenv.config();
 const app = express();
 
@@ -15,10 +16,12 @@ connectDB();
 
 // Middleware
 app.use(express.json()); // For parsing application/json
-app.use(morgan("dev"));
+app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }));
 
 // API Routes
-app.use("/api", courseRoutes);
+app.use('/api', courseRoutes);
+app.use('/api/user', userRoutes);
 
 // Healthcheck route for development
 app.get("/healtcheck", (_, res) => {
