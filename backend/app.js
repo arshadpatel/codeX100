@@ -23,11 +23,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', courseRoutes);
 app.use('/api/user', userRoutes);
 
-// Handle 404
-app.use((req, res) => {
-  res.status(404).json({ success: false, message: 'Route not found' });
+// Healthcheck route for development
+app.get("/healtcheck", (_, res) => {
+  res.send("Everything is fine & server is listening on port " + PORT);
 });
 
+// Handle 404
+app.use("*", (req, res) => {
+  res.status(404).json({ success: false, message: "Route not found" });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
