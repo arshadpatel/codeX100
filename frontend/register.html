@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - codeX100</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Registration Form -->
+    <section class="register-section">
+        <h2>Create Your Account</h2>
+        <form action="/register" method="POST" class="register-form" id="registerForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn-primary">Register</button>
+
+            <p>Or sign up using:</p>
+            <div class="oauth-buttons">
+                <a href="/auth/google" class="btn-oauth google">Sign Up with Google</a>
+                <a href="/auth/github" class="btn-oauth github">Sign Up with GitHub</a>
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
