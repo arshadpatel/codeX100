@@ -503,3 +503,54 @@ body {
       }
     }
   }
+
+  /* new */
+  .register-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.register-form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.oauth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-oauth {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.btn-oauth.google {
+    background-color: #db4437;
+}
+
+.btn-oauth.github {
+    background-color: #333;
+}
