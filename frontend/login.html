@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - codeX100</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Add styles for the login form */
+      .login-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .login-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .login-container button:hover {
+        background-color: #45a049;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <div id="emailError" class="error"></div>
+
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Login</button>
+        <div id="formSuccess" class="success"></div>
+      </form>
+    </div>
+
+    <script>
+      // Handle login form submission
+      document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Clear previous errors
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('passwordError').textContent = '';
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        let isValid = true;
+
+        // Email validation
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!emailPattern.test(email)) {
+          document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+          isValid = false;
+        }
+
+        // Password validation (minimum 8 characters)
+        if (password.length < 8) {
+          document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long.';
+          isValid = false;
+        }
+
+        if (isValid) {
+          // Simulate a successful login and redirect to index.html
+          alert('Login successful!');
+          window.location.href = "index.html";  // Redirect to index page
+        }
+      });
+    </script>
+  </body>
+</html>
