@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - codeX100</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; display: flex; flex-direction: column; align-items: center; height: 100vh;">
+
+    <!-- Navigation Bar -->
+    <nav style="width: 100%; background: #fff; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Images/codex100-logo.png" alt="codeX100 logo" style="height: 50px;" />
+                </a>
+            </div>
+            <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+                <li><a href="#" style="padding: 10px 15px; text-decoration: none; color: #333;">Home</a></li>
+                <li><a href="course.html" style="padding: 10px 15px; text-decoration: none; color: #333;">Courses</a></li>
+                <li><a href="#" style="padding: 10px 15px; text-decoration: none; color: #333;">Notes</a></li>
+                <li><a href="IDE.html" style="padding: 10px 15px; text-decoration: none; color: #333;">IDE</a></li>
+                <li><a href="#" style="padding: 10px 15px; text-decoration: none; color: #333;">Contact Us</a></li>
+                <li><a href="signup.html" class="btn" style="padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Sign Up</a></li>
+                <li><a href="login.html" class="btn" style="padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Details Section -->
+    <section style="text-align: center; padding: 20px;">
+        <h1 style="margin: 0; color: #333;">Welcome to codeX100!</h1>
+        <p style="color: #555;">Join us to master programming with live classes and curated content.</p>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section style="background-color: white; border-radius: 10px; padding: 40px; width: 400px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); margin-top: 20px;">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Create an Account</h2>
+        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <label for="username" style="color: #555;">Username</label>
+                <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            </div>
+            <div>
+                <label for="email" style="color: #555;">Email</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            </div>
+            <div>
+                <label for="password" style="color: #555;">Password</label>
+                <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            </div>
+            <div>
+                <label for="confirm-password" style="color: #555;">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            </div>
+            <button type="submit" style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Sign Up</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px; color: #555;">Already have an account? <a href="login.html" style="color: #007bff; text-decoration: none;">Login here</a>.</p>
+    </section>
+
+    <footer style="margin-top: 20px; text-align: center; padding: 10px; background: #fff; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);">
+        <p style="color: #555;">&copy; 2024 codeX100. All rights reserved.</p>
+    </footer>
+</body>
+</html>
