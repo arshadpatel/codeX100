@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Button Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Brand Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="login-dropdown">
+                    <button id="loginBtn" onclick="toggleDropdown()">Login</button>
+                    <div id="dropdownMenu" class="dropdown-content" style="display: none;">
+                        <a href="#" class="option">My Profile</a>
+                        <a href="#" class="option">Wishlist</a>
+                        <a href="#" class="option">Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
