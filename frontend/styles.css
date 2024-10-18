@@ -476,6 +476,35 @@ body {
         justify-content: center;
       }
     }
+    /* Error styling */
+.error {
+  display: none;
+  color: #ff4757;
+  font-size: 0.9em;
+  margin-top: 5px;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Success styling */
+.success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
   
     
 
