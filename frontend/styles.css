@@ -13,8 +13,8 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #333;
-    color: white;
+    background-color:rgba(36, 37, 36, 0.753);
+    color: rgb(249, 249, 249);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
