@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codeX100 - Learn Programming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* styles.css content */
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3498db;
+        padding: 10px 20px;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style-type: none;
+      }
+
+      .nav-links li {
+        margin-right: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      .btn {
+        background-color: #2ecc71;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      /* Register Form Styles */
+      .register-section {
+        text-align: center;
+        padding: 50px;
+      }
+
+      .register-form {
+        display: inline-block;
+        text-align: left;
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .register-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .btn-primary {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .oauth-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-oauth {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+      }
+
+      .btn-oauth.google {
+        background-color: #db4437;
+      }
+
+      .btn-oauth.github {
+        background-color: #333;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./Images/codex100-logo.png" alt="codeX100 logo" />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="#">Notes</a></li>
+        <li><a href="IDE.html">IDE</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="register.html" class="btn">Sign Up</a></li>
+        <li><a href="#" class="btn">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Registration Form -->
+    <section class="register-section">
+      <h2>Create Your Account</h2>
+      <form action="/register" method="POST" class="register-form" id="registerForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit" class="btn-primary">Register</button>
+
+        <p>Or sign up using:</p>
+        <div class="oauth-buttons">
+          <a href="/auth/google" class="btn-oauth google">Sign Up with Google</a>
+          <a href="/auth/github" class="btn-oauth github">Sign Up with GitHub</a>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      // script.js content
+
+      document.getElementById('hamburger').addEventListener('click', function () {
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks.style.display === 'none' || navLinks.style.display === '') {
+          navLinks.style.display = 'block';
+        } else {
+          navLinks.style.display = 'none';
+        }
+      });
+
+      // OAuth configurations using Passport
+      const passport = require('passport');
+      const GoogleStrategy = require('passport-google-oauth20').Strategy;
+      const GitHubStrategy = require('passport-github2').Strategy;
+
+      passport.use(
+        new GoogleStrategy(
+          {
+            clientID: 'YOUR_GOOGLE_CLIENT_ID',
+            clientSecret: 'YOUR_GOOGLE_CLIENT_SECRET',
+            callbackURL: '/auth/google/callback',
+          },
+          (accessToken, refreshToken, profile, done) => {
+            // Registration or login logic
+          }
+        )
+      );
+
+      passport.use(
+        new GitHubStrategy(
+          {
+            clientID: 'YOUR_GITHUB_CLIENT_ID',
+            clientSecret: 'YOUR_GITHUB_CLIENT_SECRET',
+            callbackURL: '/auth/github/callback',
+          },
+          (accessToken, refreshToken, profile, done) => {
+            // Registration or login logic
+          }
+        )
+      );
+
+      // Google OAuth route
+      app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+      app.get(
+        '/auth/google/callback',
+        passport.authenticate('google', { failureRedirect: '/login' }),
+        (req, res) => {
+          // Success handling
+          res.redirect('/');
+        }
+      );
+
+      // GitHub OAuth route
+      app.get('/auth/github', passport.authenticate('github', { scope: ['user:email'] }));
+      app.get(
+        '/auth/github/callback',
+        passport.authenticate('github', { failureRedirect: '/login' }),
+        (req, res) => {
+          // Success handling
+          res.redirect('/');
+        }
+      );
+    </script>
+  </body>
+</html>
