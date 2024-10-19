@@ -113,6 +113,34 @@
         background-color: #4db8e6;
       }
 
+      /* Search Bar */
+      .search-container {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .search-container input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 300px;
+        margin-right: 10px;
+      }
+
+      .search-container button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #61dafb;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .search-container button:hover {
+        background-color: #4db8e6;
+      }
+
       /* Footer */
       .site-footer {
         background-color: #282c34;
@@ -228,6 +256,10 @@
       </div>
 
       <h3>Recommended Courses</h3>
+      <div class="search-container">
+        <input type="text" placeholder="Search Notes..." />
+        <button>Search</button>
+      </div>
       <div class="recommended-courses">
         <div class="course-card">
           <img src="./Images/c++-thumbnail.jpg" alt="Basics of C++" class="course-thumbnail" />
