@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 34px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: hsl(211, 31%, 51%);
+        }
+        .social-login {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .social-login.google {
+            background-color: white;
+            border: 2px solid black;
+            font-weight: 600;
+            font-size: 20px;
+            color: black;
+        }
+        .social-login.github {
+            background-color: white;
+            border: 2px solid black;
+            font-weight: 600;
+            font-size: 20px;
+            color: black;
+        }
+        .login-container p {
+            margin-top: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        #submit, #password, #email{
+            font-weight: 600;
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email">
+            <div id="emailError" class="error-message"></div>
+            
+            <input type="password" id="password" placeholder="Password">
+            <div id="passwordError" class="error-message"></div>
+            
+            <button type="submit" id="submit">Login</button>
+        </form>
+
+        <button class="social-login google">Sign In with Google</button>
+        <button class="social-login github">Sign In with GitHub</button>
+
+        <p>don't have an account yet? <a href="#">Sign Up</a></p>
+    </div>
+
+    <script >
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting by default
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+   
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    let valid = true;
+
+    // Email validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        emailError.textContent = "Please enter a valid email address.";
+        valid = false;
+    }
+
+    // Password validation (minimum 8 characters)
+    if (password.length < 8) {
+        passwordError.textContent = "Password must be at least 8 characters long.";
+        valid = false;
+    }
+
+   
+    if (valid) {
+        alert("Login successful!");
+        
+    }
+});
+
+    </script>
+</body>
+</html>
