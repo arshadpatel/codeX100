@@ -237,6 +237,34 @@ body {
   color: #555;
   flex-grow: 1;
 }
+.testimonial-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.testimonial {
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
 
 /* Button styling */
 .btn-secondary {
