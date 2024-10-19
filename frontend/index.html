@@ -1,140 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>codeX100 - Learn Programming</title>
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="./Images/codex100-logo.png" alt="codeX100 logo">
+    </a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul class="nav-links">  
+    <li><a href="#">Home</a></li>
+    <li><a href="course.html">Courses</a></li>
+    <li><a href="#">Notes</a></li>
+    <li><a href="IDE.html">IDE</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#" class="btn">Sign Up</a></li>
+    <li><a href="#" class="btn">Login</a></li>
+  </ul>
+</nav>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+<section class="hero-section">
+  <h2>Welcome to codeX100</h2>
+  <p>Master programming with live classes and curated content</p>
+  <a href="#" class="btn-primary">Explore Courses</a>
+</section>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="./Images/codex100-logo.png" alt="codeX100 logo">
-        </a>
+<section class="course-recommendations">
+  <h2>Your Courses</h2>
+  <div class="course-list">
+    <p>You haven't bought any courses yet.</p>
+  </div>
+  <h3>Recommended Courses</h3>
+  <div class="recommended-courses">
+    <div class="course-card">
+      <img src="./Images/c++-thumbnail.jpg" alt="Basics of C++" class="course-thumbnail">
+      <div class="course-info">
+        <h4>Basics of C++</h4>
+        <p>Learn the fundamentals of C++ programming.</p>
+        <button class="btn-secondary">View Course</button>
       </div>
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links">  
-        <li><a href="#">Home</a></li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="#">Notes</a></li>
-        <li><a href="IDE.html">IDE</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#" class="btn">Sign Up</a></li>
-        <li><a href="#" class="btn">Login</a></li>
-      </ul>
-    </nav>
+    </div>
+    </div>
+</section>
 
-    <!-- Main Section -->
-    <section class="hero-section">
-      <h2>Welcome to codeX100</h2>
-      <p>Master programming with live classes and curated content</p>
-      <a href="#" class="btn-primary">Explore Courses</a>
-    </section>
-
-     <!-- Course Recommendations Section -->
-     <section class="course-recommendations">
-      <h2>Your Courses</h2>
-      <div class="course-list">
-        <!-- Placeholder for purchased courses -->
-        <p>You haven't bought any courses yet.</p>
-      </div>
-    
-      <h3>Recommended Courses</h3>
-      <div class="recommended-courses">
-        <!-- Example courses with thumbnails -->
-        <div class="course-card">
-          <img src="./Images/c++-thumbnail.jpg" alt="Basics of C++" class="course-thumbnail">
-          <div class="course-info">
-            <h4>Basics of C++</h4>
-            <p>Learn the fundamentals of C++ programming.</p>
-            <button class="btn-secondary">View Course</button>
-          </div>
-        </div>
-        <div class="course-card">
-          <img src="./Images/java-thumbnail.jpg" alt="Data Structures in Java" class="course-thumbnail">
-          <div class="course-info">
-            <h4>Data Structures in Java</h4>
-            <p>Master DSA with Java from basics to advanced.</p>
-            <button class="btn-secondary">View Course</button>
-          </div>
-        </div>
-        <div class="course-card">
-          <img src="./Images/c++-thumbnail.jpg" alt="Basics of C++" class="course-thumbnail">
-          <div class="course-info">
-            <h4>Basics of C++</h4>
-            <p>Learn the fundamentals of C++ programming.</p>
-            <button class="btn-secondary">View Course</button>
-          </div>
-        </div>
-        <div class="course-card">
-          <img src="./Images/java-thumbnail.jpg" alt="Data Structures in Java" class="course-thumbnail">
-          <div class="course-info">
-            <h4>Data Structures in Java</h4>
-            <p>Master DSA with Java from basics to advanced.</p>
-            <button class="btn-secondary">View Course</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Important Links</h3>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Connect With Us</h3>
-          <div class="social-icons">
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon linkedin"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon youtube"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 codeX100. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body> 
-
-</html>
-
+<footer class="site-footer">
+  </footer>
