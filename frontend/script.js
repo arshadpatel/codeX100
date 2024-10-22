@@ -12,7 +12,7 @@ function signup() {
 
 // add functionality to  hamburger 
 // Select the hamburger icon and navigation links
-document.getElementById('hamburger').addEventListener('click', function() {
+document.getElementById('hamburger').addEventListener('click', function()){
   const navLinks = document.querySelector('.nav-links');
   const icon = this.querySelector('i');
 
@@ -25,5 +25,5 @@ document.getElementById('hamburger').addEventListener('click', function() {
       icon.classList.remove('fa-times');
       icon.classList.add('fa-bars'); // Revert to hamburger icon
   }
-});
+}
 
