@@ -503,3 +503,90 @@ body {
       }
     }
   }
+
+/* Subrat's Code*/
+
+.testimonials{
+  padding-bottom: 2.2em; 
+  text-align: center;
+  color: #666;
+  font-size: 1em;
+  background-color: #f9f9f9;
+}
+.testimonials h1{
+  padding: 10px;
+  color: #050505;
+  font-size: 2em;
+  font-weight: bolder;
+}
+.testimonials .test-body{padding: 1em;}
+.testimonials .item{ 
+  text-align: center;
+  padding: 1em 0;
+}
+.testimonials img{
+  width: 4.8em;
+  height: 4.8em;
+  border-radius: 50%;
+}
+.testimonials .name{color: #007bff;}
+.testimonials .desig{
+  font-size: 0.7em;
+  padding: 0.5em 0;
+  color: #777;
+}
+.testimonials .share{
+  margin: 0 auto;
+  width: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.testimonials i{
+  color: #bfbfbf;
+  padding: 0.5em 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.testimonials button{
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.testimonials button:hover{
+  background-color: #444;
+}
+
+@media (min-width: 38.4rem){
+  .testimonials{
+      font-size: 1.2em;
+  }
+  .testimonials .test-body{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+  }
+  .testimonials p{
+      text-align: justify;
+      padding: 1em;
+
+  }
+}
+
+  
